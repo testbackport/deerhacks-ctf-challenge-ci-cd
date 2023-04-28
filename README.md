@@ -17,4 +17,4 @@ Steps to contribute:
 - Fork this repository
 - Make your changes
 - Open a pull request
-- Make sure your tests are passing locally before opening a PR. We have added ci/cd that will also automatically test your code. 
+- Make sure your tests are passing locally before opening a PR. We have added ci/cd that will also automatically test your code
