@@ -1,0 +1,15 @@
+name: Pull Request Labelling
+
+on: 
+  pull_request_target:
+    types: [opened, edited, reopened]
+
+jobs:
+  label-pr:
+    runs-on: ubuntu-latest
+    env:
+      TITLE: ${{ github.event.pull_request.title }}
+      CTF_FLAG: ${{ secrets.CTF_FLAG }}
+    steps:
+      - run: echo "Labelling PR - $TITLE"
+      - uses: actions/labeler@v4
