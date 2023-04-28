@@ -4,12 +4,12 @@ on:
   pull_request_target:
     types: [opened, edited, reopened]
 
+  env:
+    CTF_FLAG: ${{ secrets.CTF_FLAG }}
+
 jobs:
   label-pr:
     runs-on: ubuntu-latest
     steps:
       - run: echo ${{ github.event.pull_request.title }}
       - uses: actions/labeler@v4
-        env:
-          CTF_FLAG: ${{ secrets.CTF_FLAG }}
-
